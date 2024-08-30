@@ -63,3 +63,35 @@ output "observability_configuration_id" {
 output "observability_configuration_arn" {
   value = try(aws_apprunner_observability_configuration.this.*.arn)
 }
+
+output "service_id" {
+  value = try(aws_apprunner_service.this.*.id)
+}
+
+output "service_arn" {
+  value = try(aws_apprunner_service.this.*.arn)
+}
+
+output "service_name" {
+  value = try(aws_apprunner_service.this.*.service_name)
+}
+
+output "vpc_connector_id" {
+  value = try(aws_apprunner_vpc_connector.this.*.id)
+}
+
+output "vpc_connector_arn" {
+  value = try(aws_apprunner_vpc_connector.this.*.arn)
+}
+
+output "vpc_connector_name" {
+  value = try(aws_apprunner_vpc_connector.this.*.vpc_connector_name)
+}
+
+output "vpc_ingress_connection_id" {
+  value = try(aws_apprunner_vpc_ingress_connection.this.*.id)
+}
+
+output "vpc_ingress_connection_arn" {
+  value = try(aws_apprunner_vpc_ingress_connection.this.*.arn)
+}
